@@ -1,5 +1,4 @@
 
-{{config(materialized='table')}}
 with discount_name_list as 
 (
     SELECT acct_id,invitee_stub,entity_stub, listagg(DISTINCT dscnt_code,',')discount_code_list,listagg( DISTINCT discount_name_list,',') discount_name_list

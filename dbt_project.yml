@@ -33,9 +33,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   EventCloudFramework:
-    # Applies to all files under models/example/
-    Registrants:
-        Staging:
-          materialized: table
-        Main:
-          materialized: view
+      registrants:
+          staging:
+              +materialized: table
